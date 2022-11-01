@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees",
+  "info": {
+    "singularName": "employee",
+    "pluralName": "employees",
+    "displayName": "Employee"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FirstName": {
+      "type": "string"
+    },
+    "LastName": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "DateOfBirth": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "text"
+    },
+    "EmploymentDate": {
+      "type": "string"
+    },
+    "Department": {
+      "type": "string"
+    },
+    "Position": {
+      "type": "string"
+    },
+    "EmploymentType": {
+      "type": "string"
+    }
+  }
+}
