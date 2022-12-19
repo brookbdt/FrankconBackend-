@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projectImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "projectTitle": {
+      "type": "string"
+    },
+    "projectId": {
+      "type": "string"
+    },
+    "projectLead": {
+      "type": "string"
+    },
+    "projectStartDate": {
+      "type": "string"
+    },
+    "projectEndDate": {
+      "type": "string"
+    },
+    "projectDocument": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "projectDescription": {
+      "type": "text"
+    },
+    "projectCreatedBy": {
+      "type": "string"
+    },
+    "projectTask": {
+      "type": "string"
+    },
+    "projectPriority": {
+      "type": "string"
+    },
+    "projectStatus": {
+      "type": "string"
+    },
+    "projectResponsibleDepartment": {
+      "type": "string"
+    }
+  }
+}

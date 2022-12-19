@@ -26,8 +26,10 @@
     "status": {
       "type": "enumeration",
       "enum": [
+        "Todo",
         "Inprogress",
-        "Completed ",
+        "InReview ",
+        "Done",
         "Delayed"
       ]
     },
@@ -52,14 +54,15 @@
       "type": "string"
     },
     "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

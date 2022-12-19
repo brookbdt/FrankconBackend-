@@ -4,7 +4,8 @@
   "info": {
     "singularName": "employee",
     "pluralName": "employees",
-    "displayName": "Employee"
+    "displayName": "Employee",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,7 +22,8 @@
       "type": "string"
     },
     "Phone": {
-      "type": "string"
+      "type": "string",
+      "default": "+2519"
     },
     "DateOfBirth": {
       "type": "string"
@@ -40,6 +42,12 @@
     },
     "EmploymentType": {
       "type": "string"
+    },
+    "EmployeeGrossSalary": {
+      "type": "float"
+    },
+    "EmployeeNetSalary": {
+      "type": "float"
     }
   }
 }
