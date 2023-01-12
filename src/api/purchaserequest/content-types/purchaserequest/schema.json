@@ -29,6 +29,74 @@
     },
     "itemType": {
       "type": "string"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "purchaserequest"
+    },
+    "vendorImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "vendorId": {
+      "type": "string"
+    },
+    "vendorName": {
+      "type": "string"
+    },
+    "vendorAddress": {
+      "type": "string"
+    },
+    "vendorEmail": {
+      "type": "string"
+    },
+    "vendorPhone": {
+      "type": "string"
+    },
+    "itemUnitPrice": {
+      "type": "string"
+    },
+    "itemTotalPrice": {
+      "type": "string"
+    },
+    "attachedProforma": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "isApproved": {
+      "type": "string",
+      "default": "pending"
+    },
+    "notification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::notification.notification",
+      "inversedBy": "purchaseRequest"
+    },
+    "purchaseId": {
+      "type": "string"
+    },
+    "approvedBy": {
+      "type": "string"
+    },
+    "responsibleDepartment": {
+      "type": "string"
     }
   }
 }

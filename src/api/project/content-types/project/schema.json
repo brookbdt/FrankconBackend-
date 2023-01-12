@@ -66,6 +66,12 @@
     },
     "projectResponsibleDepartment": {
       "type": "string"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::employee.employee",
+      "mappedBy": "projects"
     }
   }
 }

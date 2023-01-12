@@ -15,24 +15,6 @@
     "title": {
       "type": "string"
     },
-    "priority": {
-      "type": "enumeration",
-      "enum": [
-        "high",
-        "normal",
-        "low"
-      ]
-    },
-    "status": {
-      "type": "enumeration",
-      "enum": [
-        "Todo",
-        "Inprogress",
-        "InReview ",
-        "Done",
-        "Delayed"
-      ]
-    },
     "description": {
       "type": "text"
     },
@@ -63,6 +45,21 @@
         "videos",
         "audios"
       ]
+    },
+    "jwt": {
+      "type": "text"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::employee.employee",
+      "inversedBy": "tasks"
+    },
+    "status": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string"
     }
   }
 }

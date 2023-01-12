@@ -12,42 +12,92 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "FirstName": {
+    "firstName": {
       "type": "string"
     },
-    "LastName": {
+    "lastName": {
       "type": "string"
     },
-    "Email": {
+    "email": {
       "type": "string"
     },
-    "Phone": {
+    "phone": {
       "type": "string",
       "default": "+2519"
     },
-    "DateOfBirth": {
+    "dateOfBirth": {
       "type": "string"
     },
-    "Address": {
+    "address": {
       "type": "text"
     },
-    "EmploymentDate": {
+    "employmentDate": {
       "type": "string"
     },
-    "Department": {
+    "department": {
       "type": "string"
     },
-    "Position": {
+    "position": {
       "type": "string"
     },
-    "EmploymentType": {
+    "employmentType": {
       "type": "string"
     },
-    "EmployeeGrossSalary": {
+    "employeeGrossSalary": {
       "type": "float"
     },
-    "EmployeeNetSalary": {
+    "employeeNetSalary": {
       "type": "float"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "employee"
+    },
+    "leaverequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::leave-request.leave-request",
+      "inversedBy": "employee"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "inversedBy": "employees"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "inversedBy": "employees"
+    },
+    "tasks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::task.task",
+      "mappedBy": "employee"
+    },
+    "employeeImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "employeeId": {
+      "type": "string"
+    },
+    "purchaserequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::purchaserequest.purchaserequest",
+      "mappedBy": "employee"
     }
   }
 }

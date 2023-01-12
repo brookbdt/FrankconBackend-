@@ -65,6 +65,12 @@
     },
     "department": {
       "type": "string"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "mappedBy": "users_permissions_user"
     }
   }
 }

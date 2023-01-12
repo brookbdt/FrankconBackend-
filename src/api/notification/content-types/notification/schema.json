@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifications",
+  "info": {
+    "singularName": "notification",
+    "pluralName": "notifications",
+    "displayName": "Notification",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "leaverequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::leave-request.leave-request"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "purchaseRequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::purchaserequest.purchaserequest",
+      "mappedBy": "notification"
+    }
+  }
+}

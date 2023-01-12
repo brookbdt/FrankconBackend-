@@ -29,6 +29,16 @@
     },
     "leaveReason": {
       "type": "text"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "mappedBy": "leaverequest"
+    },
+    "isApproved": {
+      "type": "string",
+      "default": "pending"
     }
   }
 }
