@@ -43,12 +43,6 @@
     "employmentType": {
       "type": "string"
     },
-    "employeeGrossSalary": {
-      "type": "float"
-    },
-    "employeeNetSalary": {
-      "type": "float"
-    },
     "users_permissions_user": {
       "type": "relation",
       "relation": "oneToOne",
@@ -98,6 +92,30 @@
       "relation": "oneToOne",
       "target": "api::purchaserequest.purchaserequest",
       "mappedBy": "employee"
+    },
+    "paymentrequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::paymentrequest.paymentrequest",
+      "mappedBy": "employee"
+    },
+    "payroll": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payroll.payroll",
+      "mappedBy": "employee"
+    },
+    "employeeGrossSalary": {
+      "type": "string"
+    },
+    "employeeNetSalary": {
+      "type": "string"
+    },
+    "workshop_task": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::workshop-task.workshop-task",
+      "inversedBy": "employees"
     }
   }
 }

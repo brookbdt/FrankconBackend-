@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "materialtransferrequests",
+  "info": {
+    "singularName": "materialtransferrequest",
+    "pluralName": "materialtransferrequests",
+    "displayName": "materialtransferrequest",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "materialTransferId": {
+      "type": "string"
+    },
+    "requesterName": {
+      "type": "string"
+    },
+    "itemType": {
+      "type": "string"
+    },
+    "itemQuantity": {
+      "type": "string"
+    },
+    "requestDate": {
+      "type": "string"
+    },
+    "transferLocation": {
+      "type": "string"
+    },
+    "additionalDetail": {
+      "type": "text"
+    },
+    "inventory_documentation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::inventory-documentation.inventory-documentation",
+      "inversedBy": "materialtransferrequest"
+    },
+    "notification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::notification.notification",
+      "mappedBy": "materialtransferrequest"
+    },
+    "isApproved": {
+      "type": "string",
+      "default": "pending"
+    },
+    "inventory": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::inventory.inventory",
+      "inversedBy": "materialTransfer"
+    },
+    "tag_registration": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tag-registration.tag-registration",
+      "mappedBy": "materialtransferrequest"
+    }
+  }
+}

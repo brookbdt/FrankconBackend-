@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tag_registrations",
+  "info": {
+    "singularName": "tag-registration",
+    "pluralName": "tag-registrations",
+    "displayName": "TagRegistration",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tagImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tagRegistrationID": {
+      "type": "string"
+    },
+    "itemName": {
+      "type": "string"
+    },
+    "itemQuantity": {
+      "type": "string"
+    },
+    "itemStorageLocation": {
+      "type": "string"
+    },
+    "itemAmount": {
+      "type": "string"
+    },
+    "itemInformation": {
+      "type": "string"
+    },
+    "inventory": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::inventory.inventory",
+      "inversedBy": "tag_registration"
+    },
+    "materialtransferrequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::materialtransferrequest.materialtransferrequest",
+      "inversedBy": "tag_registration"
+    },
+    "originalItemQuantity": {
+      "type": "string"
+    }
+  }
+}

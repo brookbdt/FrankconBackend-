@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventories",
+  "info": {
+    "singularName": "inventory",
+    "pluralName": "inventories",
+    "displayName": "Inventory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "itemTitle": {
+      "type": "string"
+    },
+    "itemLocation": {
+      "type": "string"
+    },
+    "lastPurchaseDate": {
+      "type": "string"
+    },
+    "depletionStatus": {
+      "type": "string"
+    },
+    "itemQuantity": {
+      "type": "string"
+    },
+    "itemImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "materialTransfer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::materialtransferrequest.materialtransferrequest",
+      "inversedBy": "inventory"
+    },
+    "tag_registration": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tag-registration.tag-registration",
+      "mappedBy": "inventory"
+    }
+  }
+}

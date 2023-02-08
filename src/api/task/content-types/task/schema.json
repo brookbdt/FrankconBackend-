@@ -60,6 +60,13 @@
     },
     "priority": {
       "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "isApproved": {
+      "type": "string",
+      "default": "pending"
     }
   }
 }

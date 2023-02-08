@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inbound_receiving_forms",
+  "info": {
+    "singularName": "inbound-receiving-form",
+    "pluralName": "inbound-receiving-forms",
+    "displayName": "inboundreceivingform",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "requestType": {
+      "type": "string"
+    },
+    "receivingFormId": {
+      "type": "string"
+    },
+    "itemName": {
+      "type": "string"
+    },
+    "leaveEndDate": {
+      "type": "string"
+    },
+    "itemQuantity": {
+      "type": "string"
+    },
+    "vendorPhoneNumber": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "inventory_documentation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::inventory-documentation.inventory-documentation",
+      "inversedBy": "inboundreceivingform"
+    }
+  }
+}

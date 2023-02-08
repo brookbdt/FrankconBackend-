@@ -28,6 +28,18 @@
       "relation": "oneToOne",
       "target": "api::purchaserequest.purchaserequest",
       "mappedBy": "notification"
+    },
+    "materialtransferrequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::materialtransferrequest.materialtransferrequest",
+      "inversedBy": "notification"
+    },
+    "paymentRequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::paymentrequest.paymentrequest",
+      "inversedBy": "notification"
     }
   }
 }

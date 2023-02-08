@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paymentrequests",
+  "info": {
+    "singularName": "paymentrequest",
+    "pluralName": "paymentrequests",
+    "displayName": "paymentrequest",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "paymentRequestId": {
+      "type": "string"
+    },
+    "paidTo": {
+      "type": "string"
+    },
+    "projectTitle": {
+      "type": "string"
+    },
+    "paymentAmount": {
+      "type": "string"
+    },
+    "requestDate": {
+      "type": "string"
+    },
+    "paymentPriorityLevel": {
+      "type": "string"
+    },
+    "paymentReason": {
+      "type": "string"
+    },
+    "paymentInformation": {
+      "type": "text"
+    },
+    "paymentType": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "default": "pending"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "paymentrequest"
+    },
+    "department": {
+      "type": "string"
+    },
+    "isApproved": {
+      "type": "string",
+      "default": "pending"
+    },
+    "notification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::notification.notification",
+      "inversedBy": "paymentRequest"
+    }
+  }
+}

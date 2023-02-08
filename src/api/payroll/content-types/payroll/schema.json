@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payrolls",
+  "info": {
+    "singularName": "payroll",
+    "pluralName": "payrolls",
+    "displayName": "Payroll",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "payroll"
+    },
+    "paymentStatus": {
+      "type": "string",
+      "default": "Payment Pending"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "employeeId": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "dateOfBirth": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "employmentDate": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "employmentType": {
+      "type": "string"
+    },
+    "employeeGrossSalary": {
+      "type": "string"
+    },
+    "employeeNetSalary": {
+      "type": "string"
+    },
+    "employeeImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

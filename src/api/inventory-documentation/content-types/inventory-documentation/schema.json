@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventory_documentations",
+  "info": {
+    "singularName": "inventory-documentation",
+    "pluralName": "inventory-documentations",
+    "displayName": "InventoryDocumentation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "requestType": {
+      "type": "string"
+    },
+    "itemName": {
+      "type": "string"
+    },
+    "itemType": {
+      "type": "string"
+    },
+    "requestDate": {
+      "type": "string"
+    },
+    "materialDestination": {
+      "type": "string"
+    },
+    "materialQuantity": {
+      "type": "string"
+    },
+    "inboundreceivingform": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::inbound-receiving-form.inbound-receiving-form",
+      "inversedBy": "inventory_documentation"
+    },
+    "materialtransferrequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::materialtransferrequest.materialtransferrequest",
+      "mappedBy": "inventory_documentation"
+    }
+  }
+}
