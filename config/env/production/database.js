@@ -13,9 +13,9 @@ module.exports = ({ env }) => ({
       // ssl: {
       //   rejectUnauthorized: false,
       // },
-      ssl: {
-        rejectUnauthorized: env.bool("DATABASE_SSL_SELF", false), // For self-signed certificates
-      },
+      // ssl: {
+      //   rejectUnauthorized: env.bool("DATABASE_SSL_SELF", false), // For self-signed certificates
+      // },
       debug: false,
       // ssl: process.env.DATABASE_URL ? true : false,
       // ssl: env.bool('DATABASE_SSL', true),

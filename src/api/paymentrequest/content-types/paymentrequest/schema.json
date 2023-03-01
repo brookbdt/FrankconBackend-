@@ -61,6 +61,16 @@
       "relation": "oneToOne",
       "target": "api::notification.notification",
       "inversedBy": "paymentRequest"
+    },
+    "paymentInvoice": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

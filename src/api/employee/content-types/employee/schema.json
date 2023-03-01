@@ -116,6 +116,18 @@
       "relation": "manyToOne",
       "target": "api::workshop-task.workshop-task",
       "inversedBy": "employees"
+    },
+    "task": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::task.task",
+      "inversedBy": "employee_checkeds"
+    },
+    "comment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::comment.comment",
+      "mappedBy": "employee"
     }
   }
 }

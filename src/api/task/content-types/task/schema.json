@@ -18,10 +18,7 @@
     "description": {
       "type": "text"
     },
-    "comment": {
-      "type": "text"
-    },
-    "files": {
+    "taskFiles": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -67,6 +64,24 @@
     "isApproved": {
       "type": "string",
       "default": "pending"
+    },
+    "employee_checkeds": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee.employee",
+      "mappedBy": "task"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "task"
+    },
+    "comment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::comment.comment",
+      "inversedBy": "task"
     }
   }
 }
