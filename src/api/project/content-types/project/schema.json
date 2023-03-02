@@ -73,15 +73,15 @@
       "target": "api::employee.employee",
       "mappedBy": "projects"
     },
-    "comment": {
+    "comments": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::comment.comment",
       "inversedBy": "projects"
     },
-    "task": {
+    "tasks": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::task.task",
       "inversedBy": "projects"
     }
