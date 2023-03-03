@@ -15,22 +15,22 @@
     "text": {
       "type": "string"
     },
-    "employee": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::employee.employee",
-      "inversedBy": "comment"
-    },
-    "task": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::task.task",
-      "mappedBy": "comment"
-    },
     "projects": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::project.project",
+      "inversedBy": "comments"
+    },
+    "tasks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::task.task",
+      "inversedBy": "comments"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::employee.employee",
       "inversedBy": "comments"
     }
   }

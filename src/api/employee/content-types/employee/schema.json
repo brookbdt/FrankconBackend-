@@ -123,11 +123,11 @@
       "target": "api::task.task",
       "inversedBy": "employee_checkeds"
     },
-    "comment": {
+    "comments": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToMany",
       "target": "api::comment.comment",
-      "mappedBy": "employee"
+      "inversedBy": "employees"
     }
   }
 }

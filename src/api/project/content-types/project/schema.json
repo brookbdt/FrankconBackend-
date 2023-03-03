@@ -83,7 +83,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::task.task",
-      "inversedBy": "projects"
+      "mappedBy": "projects"
     }
   }
 }
