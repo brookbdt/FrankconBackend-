@@ -15,9 +15,6 @@
     "materialTransferId": {
       "type": "string"
     },
-    "requesterName": {
-      "type": "string"
-    },
     "itemType": {
       "type": "string"
     },
@@ -60,6 +57,15 @@
       "relation": "oneToOne",
       "target": "api::tag-registration.tag-registration",
       "mappedBy": "materialtransferrequest"
+    },
+    "department": {
+      "type": "string"
+    },
+    "employee": {
+      "type": "string"
+    },
+    "requesterName": {
+      "type": "string"
     }
   }
 }

@@ -40,6 +40,24 @@
       "relation": "oneToOne",
       "target": "api::paymentrequest.paymentrequest",
       "mappedBy": "notification"
+    },
+    "inboundreceivingform": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::inbound-receiving-form.inbound-receiving-form",
+      "inversedBy": "notification"
+    },
+    "tag_registration": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tag-registration.tag-registration",
+      "inversedBy": "notification"
+    },
+    "vendor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vendor.vendor",
+      "inversedBy": "notification"
     }
   }
 }

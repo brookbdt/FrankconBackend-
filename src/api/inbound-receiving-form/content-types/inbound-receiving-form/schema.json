@@ -38,6 +38,18 @@
       "relation": "oneToOne",
       "target": "api::inventory-documentation.inventory-documentation",
       "inversedBy": "inboundreceivingform"
+    },
+    "department": {
+      "type": "string"
+    },
+    "employee": {
+      "type": "string"
+    },
+    "notification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::notification.notification",
+      "mappedBy": "inboundreceivingform"
     }
   }
 }

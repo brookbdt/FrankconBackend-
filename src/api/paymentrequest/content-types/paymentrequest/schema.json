@@ -63,14 +63,21 @@
       "inversedBy": "paymentRequest"
     },
     "paymentInvoice": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "purchaserequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::purchaserequest.purchaserequest",
+      "inversedBy": "paymentrequest"
     }
   }
 }

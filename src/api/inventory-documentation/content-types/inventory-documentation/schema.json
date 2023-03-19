@@ -34,7 +34,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::inbound-receiving-form.inbound-receiving-form",
-      "inversedBy": "inventory_documentation"
+      "mappedBy": "inventory_documentation"
     },
     "materialtransferrequest": {
       "type": "relation",

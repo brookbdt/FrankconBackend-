@@ -97,6 +97,18 @@
     },
     "responsibleDepartment": {
       "type": "string"
+    },
+    "vendor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vendor.vendor",
+      "mappedBy": "purchaserequest"
+    },
+    "paymentrequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::paymentrequest.paymentrequest",
+      "inversedBy": "purchaserequest"
     }
   }
 }

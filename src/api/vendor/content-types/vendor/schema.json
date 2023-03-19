@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vendors",
+  "info": {
+    "singularName": "vendor",
+    "pluralName": "vendors",
+    "displayName": "Vendor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vendorName": {
+      "type": "string"
+    },
+    "physicalAddress": {
+      "type": "string"
+    },
+    "emailAddress": {
+      "type": "string"
+    },
+    "vendorPhoneNumber": {
+      "type": "string"
+    },
+    "purchaserequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::purchaserequest.purchaserequest",
+      "inversedBy": "vendor"
+    },
+    "itemQuantity": {
+      "type": "string"
+    },
+    "itemUnitPrice": {
+      "type": "string"
+    },
+    "itemTotalPrice": {
+      "type": "string"
+    },
+    "attachProforma": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "isApproved": {
+      "type": "string",
+      "default": "pending"
+    },
+    "vendorImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "notification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::notification.notification",
+      "inversedBy": "vendor"
+    }
+  }
+}
