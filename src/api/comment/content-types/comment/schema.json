@@ -19,7 +19,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::project.project",
-      "inversedBy": "comments"
+      "mappedBy": "comments"
     },
     "tasks": {
       "type": "relation",

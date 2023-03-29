@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payouts",
+  "info": {
+    "singularName": "payout",
+    "pluralName": "payouts",
+    "displayName": "Payout",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "paymentrequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::paymentrequest.paymentrequest",
+      "inversedBy": "payout"
+    },
+    "payOutDate": {
+      "type": "datetime"
+    },
+    "amount": {
+      "type": "string"
+    }
+  }
+}

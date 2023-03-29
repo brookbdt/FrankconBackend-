@@ -87,12 +87,6 @@
     "employeeId": {
       "type": "string"
     },
-    "purchaserequest": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::purchaserequest.purchaserequest",
-      "mappedBy": "employee"
-    },
     "paymentrequest": {
       "type": "relation",
       "relation": "oneToOne",
@@ -128,6 +122,48 @@
       "relation": "manyToMany",
       "target": "api::comment.comment",
       "inversedBy": "employees"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project",
+      "mappedBy": "employee"
+    },
+    "personalNotifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "employee"
+    },
+    "notifications": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::notification.notification",
+      "inversedBy": "employees"
+    },
+    "inboundreceivingforms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::inbound-receiving-form.inbound-receiving-form",
+      "mappedBy": "employee"
+    },
+    "tag_registrations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag-registration.tag-registration",
+      "mappedBy": "employee"
+    },
+    "purchaserequests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::purchaserequest.purchaserequest",
+      "mappedBy": "employee"
+    },
+    "vendors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vendor.vendor",
+      "mappedBy": "employee"
     }
   }
 }

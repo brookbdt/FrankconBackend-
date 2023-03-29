@@ -82,6 +82,12 @@
       "relation": "manyToMany",
       "target": "api::project.project",
       "inversedBy": "tasks"
+    },
+    "notification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::notification.notification",
+      "mappedBy": "task"
     }
   }
 }

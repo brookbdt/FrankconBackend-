@@ -32,9 +32,9 @@
     },
     "employee": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::employee.employee",
-      "inversedBy": "purchaserequest"
+      "inversedBy": "purchaserequests"
     },
     "vendorImage": {
       "type": "media",

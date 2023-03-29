@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payins",
+  "info": {
+    "singularName": "payin",
+    "pluralName": "payins",
+    "displayName": "Payin",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "paymentrequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::paymentrequest.paymentrequest",
+      "inversedBy": "payin"
+    },
+    "payInDate": {
+      "type": "datetime"
+    },
+    "amount": {
+      "type": "string"
+    }
+  }
+}

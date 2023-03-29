@@ -55,20 +55,27 @@
       "default": "pending"
     },
     "vendorImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "notification": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::notification.notification",
-      "inversedBy": "vendor"
+      "mappedBy": "vendor"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "vendors"
     }
   }
 }

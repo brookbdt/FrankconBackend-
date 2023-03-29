@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "account_balances",
+  "info": {
+    "singularName": "account-balance",
+    "pluralName": "account-balances",
+    "displayName": "AccountBalance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "accountBalance": {
+      "type": "string"
+    }
+  }
+}

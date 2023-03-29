@@ -52,9 +52,6 @@
     "projectDescription": {
       "type": "text"
     },
-    "projectCreatedBy": {
-      "type": "string"
-    },
     "projectTask": {
       "type": "string"
     },
@@ -84,6 +81,21 @@
       "relation": "manyToMany",
       "target": "api::task.task",
       "mappedBy": "projects"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "project"
+    },
+    "projectBudget": {
+      "type": "string"
+    },
+    "notifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "project"
     }
   }
 }

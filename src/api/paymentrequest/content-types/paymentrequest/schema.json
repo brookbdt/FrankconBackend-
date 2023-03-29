@@ -77,7 +77,19 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::purchaserequest.purchaserequest",
-      "inversedBy": "paymentrequest"
+      "mappedBy": "paymentrequest"
+    },
+    "payout": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payout.payout",
+      "mappedBy": "paymentrequest"
+    },
+    "payin": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payin.payin",
+      "mappedBy": "paymentrequest"
     }
   }
 }

@@ -42,14 +42,17 @@
     "department": {
       "type": "string"
     },
-    "employee": {
-      "type": "string"
-    },
     "notification": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::notification.notification",
       "mappedBy": "inboundreceivingform"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "inboundreceivingforms"
     }
   }
 }
