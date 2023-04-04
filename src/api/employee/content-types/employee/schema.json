@@ -164,6 +164,24 @@
       "relation": "oneToMany",
       "target": "api::vendor.vendor",
       "mappedBy": "employee"
+    },
+    "payment_request_notification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment-request-notification.payment-request-notification",
+      "mappedBy": "employee"
+    },
+    "addedToPaymentRequestNotification": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::payment-request-notification.payment-request-notification",
+      "inversedBy": "employees"
+    },
+    "addedToPaymentRequest": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::paymentrequest.paymentrequest",
+      "inversedBy": "employees"
     }
   }
 }

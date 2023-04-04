@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_request_notifications",
+  "info": {
+    "singularName": "payment-request-notification",
+    "pluralName": "payment-request-notifications",
+    "displayName": "paymentRequestNotification",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "account_balance": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::account-balance.account-balance",
+      "inversedBy": "payment_request_notification"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "payment_request_notification"
+    },
+    "payin": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payin.payin",
+      "inversedBy": "payment_request_notification"
+    },
+    "payout": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payout.payout",
+      "inversedBy": "payment_request_notification"
+    },
+    "purchaserequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::purchaserequest.purchaserequest",
+      "inversedBy": "payment_request_notification"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "payment_request_notifications"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "paymentrequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::paymentrequest.paymentrequest",
+      "mappedBy": "payment_request_notification"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee.employee",
+      "mappedBy": "addedToPaymentRequestNotification"
+    },
+    "type": {
+      "type": "string",
+      "default": "payment request"
+    }
+  }
+}

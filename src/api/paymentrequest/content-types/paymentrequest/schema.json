@@ -90,6 +90,24 @@
       "relation": "oneToOne",
       "target": "api::payin.payin",
       "mappedBy": "paymentrequest"
+    },
+    "payment_request_notification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment-request-notification.payment-request-notification",
+      "inversedBy": "paymentrequest"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee.employee",
+      "mappedBy": "addedToPaymentRequest"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "paymentrequests"
     }
   }
 }

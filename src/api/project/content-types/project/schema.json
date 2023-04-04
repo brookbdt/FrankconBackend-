@@ -96,6 +96,22 @@
       "relation": "oneToMany",
       "target": "api::notification.notification",
       "mappedBy": "project"
+    },
+    "paymentrequests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::paymentrequest.paymentrequest",
+      "mappedBy": "project"
+    },
+    "payment_request_notifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::payment-request-notification.payment-request-notification",
+      "mappedBy": "project"
+    },
+    "projectExpense": {
+      "type": "string",
+      "default": "0"
     }
   }
 }

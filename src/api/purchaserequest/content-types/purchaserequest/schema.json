@@ -109,6 +109,12 @@
       "relation": "oneToOne",
       "target": "api::paymentrequest.paymentrequest",
       "inversedBy": "purchaserequest"
+    },
+    "payment_request_notification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment-request-notification.payment-request-notification",
+      "mappedBy": "purchaserequest"
     }
   }
 }
