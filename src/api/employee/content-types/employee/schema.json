@@ -182,6 +182,9 @@
       "relation": "manyToOne",
       "target": "api::paymentrequest.paymentrequest",
       "inversedBy": "employees"
+    },
+    "tinNumber": {
+      "type": "string"
     }
   }
 }
