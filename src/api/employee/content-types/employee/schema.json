@@ -141,18 +141,6 @@
       "target": "api::notification.notification",
       "inversedBy": "employees"
     },
-    "inboundreceivingforms": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::inbound-receiving-form.inbound-receiving-form",
-      "mappedBy": "employee"
-    },
-    "tag_registrations": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tag-registration.tag-registration",
-      "mappedBy": "employee"
-    },
     "purchaserequests": {
       "type": "relation",
       "relation": "oneToMany",
@@ -185,6 +173,48 @@
     },
     "tinNumber": {
       "type": "string"
+    },
+    "inboundreceivingforms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::inbound-receiving-form.inbound-receiving-form",
+      "inversedBy": "employees"
+    },
+    "tag_registrations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag-registration.tag-registration",
+      "inversedBy": "employees"
+    },
+    "materialtransferrequests": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::materialtransferrequest.materialtransferrequest",
+      "inversedBy": "employees"
+    },
+    "purchaserequest": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::purchaserequest.purchaserequest",
+      "inversedBy": "employees"
+    },
+    "notification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::notification.notification",
+      "inversedBy": "finance_notify"
+    },
+    "purchaserequestapprover": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::purchaserequest.purchaserequest",
+      "inversedBy": "approvedBy"
+    },
+    "monthly_expense": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::monthly-expense.monthly-expense",
+      "mappedBy": "employee"
     }
   }
 }

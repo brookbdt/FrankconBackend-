@@ -23,12 +23,6 @@
     "date": {
       "type": "datetime"
     },
-    "purchaseRequest": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::purchaserequest.purchaserequest",
-      "mappedBy": "notification"
-    },
     "materialtransferrequest": {
       "type": "relation",
       "relation": "oneToOne",
@@ -81,6 +75,30 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::task.task",
+      "inversedBy": "notification"
+    },
+    "purchaseRequest": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::purchaserequest.purchaserequest",
+      "inversedBy": "notifications"
+    },
+    "admin_notify": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "notification"
+    },
+    "purchaser_notify": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "notification"
+    },
+    "finance_notify": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
       "inversedBy": "notification"
     }
   }

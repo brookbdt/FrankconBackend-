@@ -62,9 +62,9 @@
       "target": "api::notification.notification",
       "mappedBy": "tag_registration"
     },
-    "employee": {
+    "employees": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::employee.employee",
       "inversedBy": "tag_registrations"
     }

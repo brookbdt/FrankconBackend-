@@ -61,11 +61,14 @@
     "department": {
       "type": "string"
     },
-    "employee": {
-      "type": "string"
-    },
     "requesterName": {
       "type": "string"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::employee.employee",
+      "inversedBy": "materialtransferrequests"
     }
   }
 }

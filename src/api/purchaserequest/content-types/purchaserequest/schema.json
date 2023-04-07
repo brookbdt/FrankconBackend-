@@ -27,9 +27,6 @@
     "itemQuantity": {
       "type": "string"
     },
-    "itemType": {
-      "type": "string"
-    },
     "employee": {
       "type": "relation",
       "relation": "manyToOne",
@@ -83,16 +80,13 @@
       "type": "string",
       "default": "pending"
     },
-    "notification": {
+    "notifications": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::notification.notification",
-      "inversedBy": "purchaseRequest"
+      "mappedBy": "purchaseRequest"
     },
     "purchaseId": {
-      "type": "string"
-    },
-    "approvedBy": {
       "type": "string"
     },
     "responsibleDepartment": {
@@ -115,6 +109,27 @@
       "relation": "oneToOne",
       "target": "api::payment-request-notification.payment-request-notification",
       "mappedBy": "purchaserequest"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee.employee",
+      "mappedBy": "purchaserequest"
+    },
+    "itemType": {
+      "type": "string"
+    },
+    "approvedBy": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "purchaserequestapprover"
+    },
+    "monthly_expense": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::monthly-expense.monthly-expense",
+      "inversedBy": "purchaserequest"
     }
   }
 }

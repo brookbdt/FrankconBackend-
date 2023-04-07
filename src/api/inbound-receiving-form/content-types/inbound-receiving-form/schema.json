@@ -48,9 +48,9 @@
       "target": "api::notification.notification",
       "mappedBy": "inboundreceivingform"
     },
-    "employee": {
+    "employees": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::employee.employee",
       "inversedBy": "inboundreceivingforms"
     }

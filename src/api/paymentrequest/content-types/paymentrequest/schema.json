@@ -108,6 +108,12 @@
       "relation": "manyToOne",
       "target": "api::project.project",
       "inversedBy": "paymentrequests"
+    },
+    "monthly_expense": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::monthly-expense.monthly-expense",
+      "mappedBy": "paymentrequest"
     }
   }
 }
