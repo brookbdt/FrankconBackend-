@@ -29,6 +29,12 @@
       "relation": "oneToOne",
       "target": "api::payment-request-notification.payment-request-notification",
       "mappedBy": "payin"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "payins"
     }
   }
 }

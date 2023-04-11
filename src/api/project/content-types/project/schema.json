@@ -112,6 +112,18 @@
     "projectExpense": {
       "type": "string",
       "default": "0"
+    },
+    "payins": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::payin.payin",
+      "mappedBy": "project"
+    },
+    "payouts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::payout.payout",
+      "mappedBy": "project"
     }
   }
 }

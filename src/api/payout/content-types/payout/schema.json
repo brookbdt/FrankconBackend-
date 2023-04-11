@@ -35,6 +35,12 @@
       "relation": "oneToOne",
       "target": "api::monthly-expense.monthly-expense",
       "mappedBy": "payout"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "payouts"
     }
   }
 }
