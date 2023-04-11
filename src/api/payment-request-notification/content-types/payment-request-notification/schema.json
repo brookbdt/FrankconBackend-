@@ -20,9 +20,9 @@
     },
     "employee": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::employee.employee",
-      "inversedBy": "payment_request_notification"
+      "inversedBy": "payment_request_notifications"
     },
     "payin": {
       "type": "relation",
