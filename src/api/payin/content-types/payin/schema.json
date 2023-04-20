@@ -35,6 +35,22 @@
       "relation": "manyToOne",
       "target": "api::project.project",
       "inversedBy": "payins"
+    },
+    "purchaserequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::purchaserequest.purchaserequest",
+      "inversedBy": "payin"
+    },
+    "isApproved": {
+      "type": "string",
+      "default": "pending"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "payins"
     }
   }
 }

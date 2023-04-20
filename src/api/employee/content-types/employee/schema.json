@@ -215,6 +215,18 @@
       "relation": "oneToMany",
       "target": "api::payment-request-notification.payment-request-notification",
       "mappedBy": "employee"
+    },
+    "payouts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::payout.payout",
+      "mappedBy": "employee"
+    },
+    "payins": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::payin.payin",
+      "mappedBy": "employee"
     }
   }
 }

@@ -130,6 +130,18 @@
       "relation": "oneToOne",
       "target": "api::monthly-expense.monthly-expense",
       "inversedBy": "purchaserequest"
+    },
+    "payout": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payout.payout",
+      "mappedBy": "purchaserequest"
+    },
+    "payin": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payin.payin",
+      "mappedBy": "purchaserequest"
     }
   }
 }
